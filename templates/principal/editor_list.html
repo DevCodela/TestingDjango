@@ -1,0 +1,26 @@
+
+{% block content %}
+
+
+    <h2>Editores</h2>
+    <ul>
+        {% for editor in lista_editores%}
+            <li><a href="{% url 'detalle_editor' editor.id %}">{{ editor.nombre }}</a></li>
+
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{{now}}
+
+<a href="{% url 'nuevo_editor'%}">Nuevo</a>
+
+<h2>Libros</h2>
+<ul>
+ {% for libro in lista_libros %}
+            <li>{{libro.titulo}}</li>
+
+        {% endfor %}
+
+
+</ul>
